@@ -1,0 +1,12 @@
+<div>
+	<% if @result == "invalid" %>
+		<p>You can only choose Rock, Paper, or Scissors</p>
+	<% else %>
+		<p>You chose <%= params[:type] %></p>
+		<p>Your opponent chose <%= @comp_choice %></p>
+		<p> You <%= @result %> </p>
+	<% end %>
+</div>
+
+<div>
+	<h3><%= link_to "Try Again!", root_path %></h3>
